@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.5.1.min.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <title>StudentService</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+
+</head>
+<body>
+
+    @Html.Partial("_navbar")
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <style>
+                h3 {
+                    background: #fff;
+                    font-family: 'Dancing Script', 'Helvetica', sans-serif;
+                    font-weight: 800;
+                    font-size: 30px;
+                    color: #b30086;
+                }
+            </style>
+            <center>
+                <h3>&copy; @DateTime.Now.Year - StudentService</h3>
+            </center>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

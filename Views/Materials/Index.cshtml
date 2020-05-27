@@ -1,0 +1,69 @@
+﻿@model IEnumerable<StudentService.Models.Material>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<center> <h2>Material</h2></center>
+<style>
+    h2 {
+        background: #fff;
+        font-family: 'Dancing Script', 'Helvetica', sans-serif;
+        font-weight: 800;
+        font-size: 30px;
+        color: #b30086;
+    }
+    .table th{
+        padding:6px;
+    }
+</style>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LectureNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LectureName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PDF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Section.DepartmentCode)
+        </th>
+        <th>
+        <th>
+        <th>
+            @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-light" })
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.LectureNumber)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LectureName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PDF)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Section.DepartmentCode)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.MaterialNumber }, new { @class = "btn btn-light" })
+    </td>
+    <td>
+
+        @Html.ActionLink("Details", "Details", new { id = item.MaterialNumber }, new { @class = "btn btn-light" })
+    </td>
+    <td>
+        @Html.ActionLink("Delete", "Delete", new { id = item.MaterialNumber }, new { @class = "btn btn-light" })
+    </td>
+</tr>
+    }
+
+</table>

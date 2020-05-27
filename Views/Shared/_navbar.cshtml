@@ -1,0 +1,231 @@
+﻿@using Microsoft.AspNet.Identity
+
+
+
+@if (User.Identity.IsAuthenticated)
+{
+    if (User.IsInRole("Admin"))
+    {
+        <header id="header">
+            <div class="vertical-nav bg-white" id="sidebar">
+                <div class="py-4 px-3 mb-2 mt-2 bg-light">
+                    <div class="align-items-center" id="half">
+                        <a class="navbar-brand text-center" href=""><h1>StudentSevice</h1></a>
+                    </div>
+                </div>
+
+
+                <ul class="nav flex-column bg-white mb-0">
+                    <li class="nav-item">
+
+                        <a href="@Url.Action("Index", "Courses")" class="nav-link text-dark font-italic bg-light">
+                            <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>Courses
+                        </a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a href="@Url.Action("Index", "Departments")" class="nav-link text-dark font-italic bg-light">
+                            <i class="fa fa-address-card mr-3 text-primary fa-fw"></i>Departments
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("Index", "Instructors")" class="nav-link text-dark font-italic bg-light">
+                            <i class="fas fa-compact-disc mr-3 text-primary fa-fw"></i>
+                            Instructors
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("Index", "Materials")" class="nav-link text-dark font-italic bg-light">
+                            <i class="fas fa-clipboard-list mr-3 text-primary fa-fw"></i>
+                            Materials
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("Index", "Sections")" class="nav-link text-dark font-italic bg-light">
+                            <i class="far fa-id-card mr-3 text-primary fa-fw"></i>
+                            Sections
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("Index", "Projects")" class="nav-link text-dark font-italic bg-light">
+                            <i class="fas fa-blog mr-3 text-primary fa-fw"></i>
+                            Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("index", "Sections")" class="nav-link text-dark font-italic bg-light">
+                            <i class="far fa-images mr-3 text-primary fa-fw"></i>
+                            Sections
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("index", "Tasks")" class="nav-link text-dark font-italic bg-light">
+                            <i class="far fa-images mr-3 text-primary fa-fw"></i>
+                            Question
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("index", "Types")" class="nav-link text-dark font-italic bg-light">
+                            <i class="far fa-images mr-3 text-primary fa-fw"></i>
+                            Types
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("index", "Roles")" class="nav-link text-dark font-italic bg-light">
+                            <i class="far fa-images mr-3 text-primary fa-fw"></i>
+                            Roles
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="@Url.Action("index", "Students")" class="nav-link text-dark font-italic bg-light">
+                            <i class="far fa-images mr-3 text-primary fa-fw"></i>
+                            Users
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    }
+    else
+    {
+        <header id="header">
+            <div class="vertical-nav bg-white" id="sidebar">
+                <div class="py-4 px-3 mb-2 mt-2 bg-light">
+                    <div class="align-items-center" id="half">
+                        <a class="navbar-brand text-center" href=""><h1>StudentSevice</h1></a>
+                    </div>
+                </div>
+
+
+                <ul class="nav flex-column bg-white mb-0">
+                    <li class="nav-item">
+
+                        <a href="@Url.Action("Index", "Courses")" class="nav-link text-dark font-italic bg-light">
+                            <i class="fa fa-th-large mr-3 text-primary fa-fw"></i>Courses
+                        </a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </header>
+
+    }
+
+}
+<!-- Start Page content holder -->
+<div class="page-content " id="content">
+
+    <!-- Toggle button -->
+    <button id="sidebarCollapse" type="button" class="btn btn-light bg-white rounded-pill px-4 mb-4"><i class="fa fa-bars mr-2"></i><small class="text-uppercase font-weight-bolder">Toggle</small></button>
+
+    <!-- Content Header -->
+
+
+
+
+</div>
+
+<style>
+
+    .table {
+        color: white;
+    }
+
+    #half h1 {
+        font-family: 'Dancing Script', 'Helvetica', sans-serif;
+        font-weight: 800;
+        font-size: 30px;
+        color: #b30086;
+    }
+    /*****************************/
+    .vertical-nav {
+        min-width: 12rem;
+        width: 12rem;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s;
+    }
+
+    .page-content {
+        margin-top: 1rem;
+        margin-left: 13rem;
+        transition: all 0.4s;
+    }
+    /*********************/
+
+
+    .lead a:hover {
+        text-decoration: none;
+    }
+
+    /* for toggle behavior */
+
+    #sidebar.active {
+        margin-left: -17rem;
+    }
+
+    #content.active {
+        margin: 0;
+    }
+
+    media (max-width: 767px) {
+        #sidebar
+
+    {
+        margin-left: -17rem;
+    }
+
+    #sidebar.active {
+        margin-left: 0;
+    }
+
+    #content {
+        width: 100%;
+        margin: 0;
+    }
+
+        #content.active {
+            margin-left: 17rem;
+            /***padge****/
+            width: calc(100% - 17rem);
+        }
+
+    }
+
+
+    body {
+        background: #330066;
+        background: linear-gradient(to right, #330066, #ff99cc);
+        background: -webkit-linear-gradient(to right, #330066, #ff99cc);
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    .separator {
+        margin: 1rem 0;
+        border-bottom: 1px dashed #fff;
+    }
+
+    .text-uppercase {
+        letter-spacing: 0.1em;
+    }
+
+    .text-gray {
+        color: #aaa;
+    }
+</style>
+
+<script>
+    // Sidebar toggle behavior function
+    $(function () {
+        // Sidebar toggle behavior
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar, #content').toggleClass('active');
+
+        });
+    });
+</script>
