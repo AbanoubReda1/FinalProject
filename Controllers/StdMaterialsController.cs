@@ -19,7 +19,9 @@ namespace StudentService.Controllers
         {
             List<Department> Departmentlist = db.Departments.ToList();
             ViewBag.Departmentlist = new SelectList(Departmentlist, "DepartmentCode", "DepartmentName");
-            var materials = db.Materials.Include(m => m.Section);
+
+            var materials = db.Materials.Where(a => a.CourseCode == a.DepartmentCode);
+
             return View(materials.ToList());
         }
         [HttpPost]

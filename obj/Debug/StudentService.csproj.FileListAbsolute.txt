@@ -185,8 +185,8 @@ E:\StudentService\FinalProject\bin\System.Web.WebPages.Razor.xml
 E:\StudentService\FinalProject\bin\Newtonsoft.Json.xml
 E:\StudentService\FinalProject\bin\Antlr3.Runtime.pdb
 E:\StudentService\FinalProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\StudentService\FinalProject\obj\Debug\StudentService.csprojAssemblyReference.cache
 E:\StudentService\FinalProject\obj\Debug\StudentService.csproj.CoreCompileInputs.cache
 E:\StudentService\FinalProject\obj\Debug\StudentService.csproj.CopyComplete
 E:\StudentService\FinalProject\obj\Debug\StudentService.dll
 E:\StudentService\FinalProject\obj\Debug\StudentService.pdb
+E:\StudentService\FinalProject\obj\Debug\StudentService.csprojAssemblyReference.cache
