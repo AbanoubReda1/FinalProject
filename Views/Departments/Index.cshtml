@@ -1,0 +1,54 @@
+﻿@model IEnumerable<StudentService.Models.Department>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<center> <h2>Department</h2></center>
+<style>
+    h2 {
+        background: #fff;
+        font-family: 'Dancing Script', 'Helvetica', sans-serif;
+        font-weight: 800;
+        font-size: 30px;
+        color: #b30086;
+    }
+</style>
+
+
+<table class="table ">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartmentName)
+        </th>
+        
+        <th>
+        <th>
+        <th>
+            <th >
+            @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-light" })
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.DepartmentName)
+    </td>
+    <td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.DepartmentCode }, new { @class = "btn btn-light" })
+    </td>
+    <td>
+
+        @Html.ActionLink("Details", "Details", new { id = item.DepartmentCode }, new { @class = "btn btn-light" })
+    </td>
+    <td>
+        @Html.ActionLink("Delete", "Delete", new { id = item.DepartmentCode }, new { @class = "btn btn-light" })
+    </td>
+    
+</tr>
+    }
+
+</table>
