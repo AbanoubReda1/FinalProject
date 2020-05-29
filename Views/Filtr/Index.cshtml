@@ -31,7 +31,7 @@
                         @foreach (var pop in (ViewBag.course as List<StudentService.Models.Course>))
                         {
                             <a class="dropdown-item" href="#">
-                                @pop.CourseTitle
+                                @pop.Department.DepartmentCode
                             </a>
                         }
 

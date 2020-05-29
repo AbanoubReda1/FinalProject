@@ -13,16 +13,15 @@ namespace StudentService.Views
     {
         // GET: Filtr
         StudentServiceEntities db = new StudentServiceEntities();
-        public ActionResult Index(Course course)
+        public ActionResult Index(string deo)
         {
 
 
             ViewBag.DepartmentCode = db.Departments.ToList();
 
+            ViewBag.course = db.Courses.ToList();
 
-
-
-            return View(course);
+            return View();
            
           
 
