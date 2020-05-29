@@ -14,27 +14,36 @@
     </a>
 
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-       
-        
+
+
+        @foreach (var emp in (ViewBag.DepartmentCode as List<StudentService.Models.Department>))
+        {
             <li class="dropdown-submenu">
-                <a class="dropdown-item" tabindex="-1" href="#">
-                   
-                    @ViewBag.DepartmentCode.DepartmentCode
 
 
+                <a class="dropdown-item" tabindex="-1" href="#" id="DepartmentCode" name="DepartmentCode">
+
+                    @emp.DepartmentName
                 </a>
+
                 <ul class="dropdown-menu">
                     <li class="dropdown-submenu">
-                        <a class="dropdown-item" href="#"></a>
+                        @foreach (var pop in (ViewBag.course as List<StudentService.Models.Course>))
+                        {
+                            <a class="dropdown-item" href="#">
+                                @pop.CourseTitle
+                            </a>
+                        }
+
                         <ul class="dropdown-menu">
                             <li class="dropdown-submenu">
                                 @*<a class="dropdown-item" href="#">@item.SectionDetails.Semester - @item.SectionDetails.Year</a>*@
                                 <ul class="dropdown-menu">
                                     @*@foreach (var item2 in Model)
-                                             {
-                                             <li class="dropdown-submenu">
-                                                 <a class="dropdown-item" href="#">@item2.MaterialDetails.LectureName</a>
-                                        </li>}*@
+                                         {
+                                         <li class="dropdown-submenu">
+                                             <a class="dropdown-item" href="#">@item2.MaterialDetails.LectureName</a>
+                                    </li>}*@
                                 </ul>
                             </li>
                         </ul>
