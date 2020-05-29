@@ -283,3 +283,6 @@ C:\Users\abram\source\repos\abanoubPro\FinalProject\bin\Microsoft.CodeDom.Provid
 C:\Users\abram\source\repos\abanoubPro\FinalProject\obj\Debug\StudentService.csproj.CopyComplete
 C:\Users\abram\source\repos\abanoubPro\FinalProject\obj\Debug\StudentService.dll
 C:\Users\abram\source\repos\abanoubPro\FinalProject\obj\Debug\StudentService.pdb
+C:\Users\abram\source\repos\abanoubPro\FinalProject\bin\StudentService.dll.config
+C:\Users\abram\source\repos\abanoubPro\FinalProject\obj\Debug\StudentService.csprojAssemblyReference.cache
+C:\Users\abram\source\repos\abanoubPro\FinalProject\obj\Debug\StudentService.csproj.CoreCompileInputs.cache

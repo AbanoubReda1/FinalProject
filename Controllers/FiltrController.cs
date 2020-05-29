@@ -17,7 +17,7 @@ namespace StudentService.Views
         {
 
 
-            ViewBag.DepartmentCode = new Department();
+            ViewBag.DepartmentCode = db.Departments.ToList();
 
 
 
